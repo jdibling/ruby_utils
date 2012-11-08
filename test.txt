@@ -1,0 +1,239 @@
+TransactionType|TransactionSequence|Ticker|Bid|BidSize|Ask|AskSize|BidDepth|AskDepth
+OrderDelete|1310470|SU.T.CA
+Quote|328499|RGL.T.CA|          85.22T 09:42:31.000|3|          85.46T 09:42:31.000|2
+OrderDelete|1310471|SU.T.CA
+OrderAdd|1310471|SU.T.CA
+OrderDelete|1310474|SU.T.CA
+OrderAdd|1310476|RY.T.CA
+OrderAdd|1310478|RY.T.CA
+OrderAdd|1310479|RY.T.CA
+OrderDelete|1310480|RGL.T.CA
+OrderDelete|1310481|RGL.T.CA
+OrderAdd|1310481|RGL.T.CA
+OrderDelete|1310488|SU.T.CA
+OrderDelete|1310489|SU.T.CA
+OrderDelete|1310490|SU.T.CA
+OrderDelete|1310491|SU.T.CA
+OrderAdd|1310491|SU.T.CA
+OrderDelete|1310493|SU.T.CA
+OrderDelete|1310494|SU.T.CA
+OrderAdd|1310494|SU.T.CA
+OrderDelete|1310497|SU.T.CA
+OrderDelete|1310499|SU.T.CA
+OrderDelete|1310505|SU.T.CA
+OrderDelete|1310505|SU.T.CA
+OrderDelete|1310506|SU.T.CA
+OrderDelete|1310506|SU.T.CA
+OrderDelete|1310507|SU.T.CA
+OrderDelete|1310507|SU.T.CA
+OrderDelete|1310508|SU.T.CA
+OrderDelete|1310508|SU.T.CA
+OrderDelete|1310509|SU.T.CA
+OrderDelete|1310509|SU.T.CA
+OrderDelete|1310510|SU.T.CA
+OrderDelete|1310511|SU.T.CA
+OrderAdd|1310513|SU.T.CA
+OrderAdd|1310514|SU.T.CA
+OrderDelete|1310520|SU.T.CA
+OrderDelete|1310521|SU.T.CA
+OrderAdd|1310521|SU.T.CA
+OrderDelete|1310522|SU.T.CA
+OrderDelete|1310523|SU.T.CA
+OrderAdd|1310523|SU.T.CA
+OrderDelete|1310532|RGL.T.CA
+OrderDelete|1310533|RGL.T.CA
+OrderAdd|1310533|RGL.T.CA
+OrderAdd|1310541|RY.T.CA
+OrderDelete|1310542|RY.T.CA
+OrderDelete|1310543|RY.T.CA
+OrderDelete|1310544|RY.T.CA
+OrderAdd|1310544|RY.T.CA
+OrderDelete|1310545|RY.T.CA
+OrderDelete|1310546|RY.T.CA
+OrderAdd|1310546|RY.T.CA
+OrderAdd|1310547|RY.T.CA
+OrderAdd|1310548|RY.T.CA
+OrderAdd|1310549|RY.T.CA
+OrderAdd|1310550|SU.T.CA
+OrderAdd|1310551|SU.T.CA
+OrderDelete|1310552|SU.T.CA
+OrderAdd|1310553|RY.T.CA
+OrderDelete|1310554|SU.T.CA
+OrderDelete|1310555|SU.T.CA
+Quote|328501|SU.T.CA|          32.74T 09:42:31.000|10|          32.75T 09:42:31.000|17
+Quote|328502|SU.T.CA|          32.74T 09:42:31.000|7|          32.75T 09:42:31.000|17
+Trade|328505|SU.T.CA
+Trade|328506|SU.T.CA
+Trade|328507|SU.T.CA
+Trade|328508|SU.T.CA
+Trade|328509|SU.T.CA
+Quote|328510|SU.T.CA|          32.74T 09:42:31.000|7|          32.75T 09:42:31.000|8
+Quote|328511|SU.T.CA|          32.74T 09:42:31.000|7|          32.75T 09:42:31.000|6
+Quote|328512|SU.T.CA|          32.74T 09:42:31.000|7|          32.75T 09:42:31.000|4
+Quote|328513|SU.T.CA|          32.74T 09:42:31.000|8|          32.75T 09:42:31.000|4
+Quote|328514|SU.T.CA|          32.74T 09:42:31.000|10|          32.75T 09:42:31.000|4
+Quote|328524|RGL.T.CA|          85.22T 09:42:31.000|3|          85.46T 09:42:31.000|1
+Quote|328527|RY.T.CA|          56.93T 09:42:31.000|3|          56.94T 09:42:31.000|7
+Quote|328528|RY.T.CA|          56.93T 09:42:31.000|3|          56.94T 09:42:31.000|6
+Quote|328529|RY.T.CA|          56.93T 09:42:31.000|4|          56.94T 09:42:31.000|6
+Quote|328530|RY.T.CA|          56.93T 09:42:31.000|6|          56.94T 09:42:31.000|6
+Quote|328531|RY.T.CA|          56.93T 09:42:31.000|6|          56.94T 09:42:31.000|7
+Quote|328532|RY.T.CA|          56.93T 09:42:31.000|6|          56.94T 09:42:31.000|9
+Quote|328533|SU.T.CA|          32.74T 09:42:31.000|12|          32.75T 09:42:31.000|4
+Quote|328534|SU.T.CA|          32.74T 09:42:31.000|12|          32.75T 09:42:31.000|3
+Quote|328535|SU.T.CA|          32.74T 09:42:31.000|12|          32.76T 09:42:31.000|36
+Quote|328536|SU.T.CA|          32.74T 09:42:31.000|11|          32.76T 09:42:31.000|36
+Quote|328537|SU.T.CA|          32.75T 09:42:31.000|1|          32.76T 09:42:31.000|36
+Quote|328540|SU.T.CA|          32.75T 09:42:31.000|5|          32.76T 09:42:31.000|36
+Quote|328541|SU.T.CA|          32.75T 09:42:31.000|4|          32.76T 09:42:31.000|36
+Quote|328545|SU.T.CA|          32.74T 09:42:31.000|15|          32.76T 09:42:31.000|36
+Quote|328546|SU.T.CA|          32.74T 09:42:31.000|15|          32.76T 09:42:31.000|35
+Quote|328549|SU.T.CA|          32.74T 09:42:31.000|15|          32.76T 09:42:31.000|34
+OrderDelete|1310556|SU.T.CA
+OrderAdd|1310557|SU.T.CA
+OrderAdd|1310560|SU.T.CA
+OrderDelete|1310562|SU.T.CA
+OrderAdd|1310565|SU.T.CA
+OrderAdd|1310566|SU.T.CA
+OrderAdd|1310570|SU.T.CA
+OrderDelete|1310571|SU.T.CA
+OrderDelete|1310572|SU.T.CA
+OrderAdd|1310572|SU.T.CA
+OrderDelete|1310573|SU.T.CA
+OrderDelete|1310574|SU.T.CA
+OrderAdd|1310574|SU.T.CA
+OrderDelete|1310575|SU.T.CA
+OrderDelete|1310576|SU.T.CA
+OrderAdd|1310576|SU.T.CA
+OrderAdd|1310577|SU.T.CA
+OrderAdd|1310578|SU.T.CA
+OrderDelete|1310579|SU.T.CA
+OrderDelete|1310582|SU.T.CA
+OrderDelete|1310583|SU.T.CA
+OrderAdd|1310583|SU.T.CA
+OrderAdd|1310584|SU.T.CA
+OrderAdd|1310589|SU.T.CA
+OrderAdd|1310590|SU.T.CA
+OrderAdd|1310591|SU.T.CA
+OrderAdd|1310592|SU.T.CA
+OrderDelete|1310595|SU.T.CA
+OrderDelete|1310596|SU.T.CA
+OrderDelete|1310598|SU.T.CA
+OrderDelete|1310599|SU.T.CA
+OrderAdd|1310599|SU.T.CA
+OrderDelete|1310600|SU.T.CA
+OrderDelete|1310601|SU.T.CA
+OrderAdd|1310601|SU.T.CA
+OrderDelete|1310604|SU.T.CA
+OrderDelete|1310605|SU.T.CA
+OrderAdd|1310605|SU.T.CA
+OrderDelete|1310606|SU.T.CA
+OrderDelete|1310607|SU.T.CA
+OrderAdd|1310607|SU.T.CA
+OrderDelete|1310613|SU.T.CA
+OrderDelete|1310614|SU.T.CA
+OrderAdd|1310614|SU.T.CA
+OrderDelete|1310617|SU.T.CA
+Quote|373249|ABX.T.CA|          38.65T 09:42:32.000|14|          38.67T 09:42:32.000|13
+Quote|328623|RGL.T.CA|          85.22T 09:42:32.000|3|          85.46T 09:42:32.000|2
+Quote|328627|RGL.T.CA|          85.22T 09:42:32.000|2|          85.46T 09:42:32.000|2
+Quote|328628|RGL.T.CA|          85.22T 09:42:32.000|1|          85.46T 09:42:32.000|2
+Quote|328629|RGL.T.CA|          85.22T 09:42:32.000|1|          85.46T 09:42:32.000|1
+Quote|328635|RY.T.CA|          56.93T 09:42:32.000|5|          56.94T 09:42:32.000|9
+Quote|328636|RY.T.CA|          56.93T 09:42:32.000|3|          56.94T 09:42:32.000|9
+Quote|328637|RY.T.CA|          56.93T 09:42:32.000|3|          56.94T 09:42:32.000|8
+Quote|328638|RY.T.CA|          56.93T 09:42:32.000|3|          56.94T 09:42:32.000|6
+OrderAdd|1310748|SU.T.CA
+OrderAdd|1337961|ABX.T.CA
+OrderDelete|1310772|RGL.T.CA
+OrderDelete|1310773|RGL.T.CA
+OrderAdd|1310773|RGL.T.CA
+OrderDelete|1310779|RGL.T.CA
+OrderDelete|1310780|RGL.T.CA
+OrderAdd|1310780|RGL.T.CA
+OrderDelete|1310782|RGL.T.CA
+OrderDelete|1310783|RGL.T.CA
+OrderAdd|1310783|RGL.T.CA
+OrderDelete|1310784|RGL.T.CA
+OrderDelete|1310785|RGL.T.CA
+OrderDelete|1310786|RGL.T.CA
+OrderAdd|1310786|RGL.T.CA
+OrderDelete|1310807|RY.T.CA
+OrderDelete|1310810|RY.T.CA
+OrderDelete|1310811|RY.T.CA
+OrderDelete|1310814|RY.T.CA
+OrderDelete|1310819|RY.T.CA
+OrderAdd|1310820|RY.T.CA
+OrderAdd|1310821|RY.T.CA
+OrderDelete|1310822|RY.T.CA
+OrderDelete|1310823|RY.T.CA
+OrderAdd|1310823|RY.T.CA
+OrderDelete|1310824|RY.T.CA
+OrderDelete|1310825|RY.T.CA
+OrderAdd|1310825|RY.T.CA
+OrderDelete|1310847|SU.T.CA
+OrderDelete|1310848|SU.T.CA
+OrderAdd|1310848|SU.T.CA
+OrderDelete|1310850|SU.T.CA
+OrderDelete|1310851|SU.T.CA
+OrderDelete|1310852|SU.T.CA
+OrderAdd|1310852|SU.T.CA
+OrderDelete|1310853|SU.T.CA
+OrderDelete|1310853|SU.T.CA
+OrderDelete|1310854|SU.T.CA
+OrderAdd|1310855|SU.T.CA
+OrderDelete|1310856|SU.T.CA
+OrderDelete|1310857|SU.T.CA
+OrderDelete|1310858|SU.T.CA
+OrderDelete|1310859|SU.T.CA
+OrderAdd|1310859|SU.T.CA
+OrderDelete|1310860|SU.T.CA
+OrderDelete|1310861|SU.T.CA
+OrderAdd|1310861|SU.T.CA
+OrderAdd|1310862|SU.T.CA
+OrderAdd|1310863|SU.T.CA
+OrderDelete|1310864|SU.T.CA
+OrderAdd|1310865|SU.T.CA
+OrderAdd|1310866|SU.T.CA
+OrderDelete|1310869|SU.T.CA
+Trade|328650|SU.T.CA
+Quote|328651|SU.T.CA|          32.74T 09:42:32.000|15|          32.76T 09:42:32.000|33
+Quote|328652|SU.T.CA|          32.74T 09:42:32.000|14|          32.76T 09:42:32.000|33
+Quote|328653|SU.T.CA|          32.75T 09:42:32.000|1|          32.76T 09:42:32.000|33
+Quote|328654|SU.T.CA|          32.75T 09:42:32.000|1|          32.76T 09:42:32.000|31
+Quote|328655|SU.T.CA|          32.75T 09:42:32.000|4|          32.76T 09:42:32.000|31
+Quote|328656|SU.T.CA|          32.75T 09:42:32.000|5|          32.76T 09:42:32.000|31
+Quote|328657|SU.T.CA|          32.75T 09:42:32.000|5|          32.76T 09:42:32.000|30
+Quote|328658|SU.T.CA|          32.75T 09:42:32.000|7|          32.76T 09:42:32.000|30
+Quote|328659|SU.T.CA|          32.75T 09:42:32.000|8|          32.76T 09:42:32.000|30
+Quote|328662|SU.T.CA|          32.75T 09:42:32.000|8|          32.76T 09:42:32.000|29
+OrderDelete|1310870|SU.T.CA
+OrderAdd|1310870|SU.T.CA
+OrderAdd|1310871|SU.T.CA
+OrderDelete|1310872|SU.T.CA
+OrderDelete|1310873|SU.T.CA
+OrderDelete|1310874|SU.T.CA
+OrderAdd|1310874|SU.T.CA
+OrderAdd|1310875|SU.T.CA
+OrderAdd|1310876|SU.T.CA
+OrderDelete|1310877|SU.T.CA
+OrderDelete|1310878|SU.T.CA
+OrderAdd|1310878|SU.T.CA
+OrderAdd|1310879|SU.T.CA
+OrderDelete|1310880|SU.T.CA
+OrderDelete|1310881|SU.T.CA
+OrderAdd|1310881|SU.T.CA
+OrderDelete|1310882|SU.T.CA
+OrderDelete|1310883|SU.T.CA
+OrderAdd|1310883|SU.T.CA
+OrderDelete|1310884|SU.T.CA
+OrderDelete|1310885|SU.T.CA
+OrderAdd|1310885|SU.T.CA
+OrderDelete|1310886|SU.T.CA
+Quote|328672|RGL.T.CA|          85.22T 09:42:32.000|1|          85.46T 09:42:32.000|2
+Quote|328674|SU.T.CA|          32.75T 09:42:32.000|6|          32.76T 09:42:32.000|29
+Quote|328675|SU.T.CA|          32.75T 09:42:32.000|3|          32.76T 09:42:32.000|29
+Quote|328676|SU.T.CA|          32.75T 09:42:32.000|2|          32.76T 09:42:32.000|29
+Quote|328677|SU.T.CA|          32.75T 09:42:32.000|1|          32.76T 09:42:32.000|29
+Quote|328681|RGL.T.CA|          85.22T 09:42:32.000|1|          85.46T 09:42:32.000|1
+Quote|373279|ABX.T.CA|          38.65T 09:42:32.000|14|          38.67T 09:42:32.000|15
