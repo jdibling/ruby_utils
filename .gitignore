@@ -1,3 +1,24 @@
+<<<<<<< HEAD
 .idea/*
 *.txt
 
+=======
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+>>>>>>> 98d950f71fdd7c5b152b127d47df855c9da5f0d8

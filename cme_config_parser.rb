@@ -4,6 +4,7 @@ require 'rexml/document'
 require 'pp'
 
 class Optparse
+	
 	def self.parse(args)	
 		options = OpenStruct.new
 		options.config_file = nil
@@ -16,6 +17,7 @@ class Optparse
 			opts.banner = "Usage: parse_cme_sfg.rb config-file interface template-file [options]"
 			opts.separator ""
 			opts.separator "Specific options:"
+			
 			
 			# Mode [optional]
 			opts.on("-m", "--mode MODE", [:sips, :mdumps]) do |mode|
@@ -32,6 +34,12 @@ class Optparse
 			  puts opts
 			  exit
 			end			
+			
+			# Version
+			opts.on_tail("--version", "Show version") do
+				$stderr.puts "0.91"
+				exit
+			end
 			
 			opts.parse!(args)
 			
@@ -66,7 +74,14 @@ end
 
 options = Optparse.parse(ARGV)
 
-$stderr.puts "Parsing CME Config File Found At '#{options.config_file.path}'..."
+$stderr.puts
+$stderr.puts "Config File: \t#{options.config_file.path}"
+$stderr.puts "Interface: \t#{options.ifc}"
+$stderr.puts "Template: \t#{options.template}"
+$stderr.puts "Whitelist: \t(#{options.whitelist.size}) [#{options.whitelist.inject(""){|r,e| r += ", " if !r.empty?; r + e.to_s}}]" if !options.whitelist.nil?
+if !options.whilelist.nil?
+	$stderr.puts "Channel Whitelist: #{options.whitelist}\n"
+end
 
 config = options.config_file.read
 doc = REXML::Document.new(config)
@@ -159,7 +174,7 @@ feeds.each {|chan_id,chan_types|
           puts    "\t<#{line_name}>"
           puts      "\t\t<!-- #{chan_type.to_s}/#{chan_side.to_s} -->"
           puts      "\t\t<Interface>#{options.ifc}</Interface>"
-          puts      "\t\t<TemplateName>#{options.fast_template}</TemplateName>"
+          puts      "\t\t<TemplateName>#{options.template}</TemplateName>"
           puts      "\t\t<SipType>MultiCast</SipType>"
           puts      "\t\t<TargetName>#{conn[:ip]}</TargetName>"
           puts      "\t\t<Port>#{conn[:port]}</Port>"
