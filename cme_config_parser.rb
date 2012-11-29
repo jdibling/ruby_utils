@@ -169,7 +169,7 @@ feeds.each {|chan_id,chan_types|
   if options.mode == :sips
     sip_name = "CMEFAST_#{chan_id}"
     puts  "<#{sip_name}>"
-    puts 		"\t<xName>#{names[chan_id]}</xName>"
+    puts 		"\t<xName>#{names[chan_id].gsub(" ","_")}</xName>"
     options.additional_tags.each do |tag|
     	puts	"\t#{tag}"
     end
