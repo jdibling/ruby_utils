@@ -12,21 +12,32 @@ class Optparse
 		options.template = nil
 		options.mode = :sips
 		options.whitelist = nil
+		options.additional_tags = Array.new
 		
 		opts = OptionParser.new do |opts|			
-			opts.banner = "Usage: parse_cme_sfg.rb config-file interface template-file [options]"
 			opts.separator ""
-			opts.separator "Specific options:"
+
+			opts.banner = 	"Sips Usage:    \tparse_cme_sfg.rb config-file interface template-file [--mode sips] [options]\n"
+			opts.banner += 	"Capdata Usage: \tparse_cme_sfg.rb config-file [interface] [template-file] --mode capdata [options]\n"
+			opts.banner +=	"List Usage:    \tparse_cme_sfg.rb config-file [interface] [template-file] --mode list [options]\n"
+			opts.banner +=	"mdump Usage:   \tparse_cme_sfg.rb config-file [interface] [template-file] --mode mdump [options]\n"
 			
+			opts.separator ""
+			opts.separator "Specific options:"			
 			
 			# Mode [optional]
-			opts.on("-m", "--mode MODE", [:sips, :mdumps]) do |mode|
+			opts.on("-m", "--mode MODE", [:sips, :mdumps, :capdata, :list]) do |mode|
 				options.mode =  mode
 			end
 		   
 		  # Whitelist [optional]
 		  opts.on("-w", "--whitelist WHITELIST") do |whitelist|
 		  	options.whitelist = whitelist.scan(/\d+/).map(&:to_i)
+		  end
+		  
+		  # Additional Tags [optional]
+		  opts.on("-t", "--additional-tag TAG") do |add_tag|
+		  	options.additional_tags.push add_tag.to_s
 		  end
 		  
 		  # Help 
@@ -43,7 +54,7 @@ class Optparse
 			
 			opts.parse!(args)
 			
-			# now pull out the positional arguments
+			# now pull out the positional arguments required by all modes
 			if args.empty?
 				$stderr.puts "Congfig File Not Specified\n\n#{opts}"
 				exit;
@@ -54,21 +65,24 @@ class Optparse
 			end
 			options.config_file = File.open(args.delete_at(0),"rb")
 			
-			if args.empty? 
-				$stderr.puts "Interface Not Specified\n\n#{opts}"
-				exit
+			# pull out positional arguments needed in :sips mode
+			if options.mode == :sips
+				
+				if args.empty? 
+					$stderr.puts "Interface Not Specified.  Required in sips mode\n\n#{opts}"
+					exit
+				end
+				options.ifc = args.delete_at(0)
+				
+				if args.empty?
+					$stderr.puts "FAST Template Not Specified.  Required in sips mode\n\n#{opts}"
+					exit
+				end
+				options.template = args.delete_at(0)
+				
+				return options
 			end
-			options.ifc = args.delete_at(0)
-			
-			if args.empty?
-				$stderr.puts "FAST Template Not Specified\n\n#{opts}"
-				exit
-			end
-			options.template = args.delete_at(0)
-			
-			return options
 		end
-		
 	end
 end
 
@@ -82,15 +96,26 @@ $stderr.puts "Whitelist: \t(#{options.whitelist.size}) [#{options.whitelist.inje
 if !options.whilelist.nil?
 	$stderr.puts "Channel Whitelist: #{options.whitelist}\n"
 end
+if !options.additional_tags.empty?
+	$stderr.puts "Additional Tags: (#{options.additional_tags.size})"
+	options.additional_tags.each do |tag|
+		$stderr.puts "\t#{tag}"
+	end
+end
+
+$stderr.puts "\nProcessing.  Patience...\n\n"
 
 config = options.config_file.read
 doc = REXML::Document.new(config)
 
 feeds = Hash.new  # feeds[chan-id][type][side] = conn-element
+names = Hash.new	# names[chan-id] = chan-name
 
 doc.elements.each("configuration/channel") { |ch|
   chan_id = ch.attributes["id"].to_s
-  #chan_name = ch.attributes["label"].to_s
+  chan_name = ch.attributes["label"].to_s
+  
+  names[chan_id] = chan_name
 
   next if !options.whitelist.nil? and !options.whitelist.include?(chan_id.to_i)
 
@@ -144,6 +169,10 @@ feeds.each {|chan_id,chan_types|
   if options.mode == :sips
     sip_name = "CMEFAST_#{chan_id}"
     puts  "<#{sip_name}>"
+    puts 		"\t<xName>#{names[chan_id]}</xName>"
+    options.additional_tags.each do |tag|
+    	puts	"\t#{tag}"
+    end
     puts    "\t<DllName>cmefast</DllName>"
     puts    "\t<DisconnectWhenDown>true</DisconnectWhenDown>"
     puts    "\t<Channel>ProcessedFuturePrice</Channel>"
@@ -169,7 +198,12 @@ feeds.each {|chan_id,chan_types|
                       when :snapshot then "Recovery2"
                     end
         if options.mode == :mdumps
-          puts "start \"#{conn[:id]}\" mdump #{conn[:ip]} #{conn[:port]} #{ifc}"
+          puts "start \"#{conn[:id]}\" mdump #{conn[:ip]} #{conn[:port]} #{options.ifc}"
+        elsif options.mode == :list
+        	longest = names.values.inject { |acc,x|  if x.length > acc.length then x else acc end }
+        	 puts "#{sprintf("(%3d) %-*s", chan_id, longest.length ,names[chan_id])}\t#{sprintf("%-20s",chan_type.to_s)}\t#{chan_side.to_s}\t#{conn[:ip]}\t#{conn[:port]}"
+        elsif options.mode == :capdata
+        	puts "start \"#{conn[:id]}\" capdata #{conn[:ip]} #{conn[:port]} #{options.ifc} #{conn[:id]}.cap"
         elsif options.mode == :sips
           puts    "\t<#{line_name}>"
           puts      "\t\t<!-- #{chan_type.to_s}/#{chan_side.to_s} -->"
@@ -187,5 +221,7 @@ feeds.each {|chan_id,chan_types|
   puts "</#{sip_name}>"  if options.mode == :sips
 
 }
+
+$stderr.puts "Done."
 
 
