@@ -56,29 +56,30 @@ class Optparse
 			
 			# now pull out the positional arguments required by all modes
 			if args.empty?
-				$stderr.puts "Congfig File Not Specified\n\n#{opts}"
+				$stderr.puts "*** Config File Not Specified\n\n#{opts}"
 				exit;
 			end
 			if !File.exist?(args[0])
-				$stderr.puts "Config File Not Found: #{args[0]}"
+				$stderr.puts "*** Config File Not Found: #{args[0]}"
 				exit
 			end
 			options.config_file = File.open(args.delete_at(0),"rb")
 			
-			# pull out positional arguments needed in :sips mode
+
+			# pull out positional arguments needed in :sips mode, optional in others
+			options.ifc = args.delete_at(0) unless args.empty?
+			options.template = args.delete_at(0) unless args.empty?
+
 			if options.mode == :sips
-				
-				if args.empty? 
-					$stderr.puts "Interface Not Specified.  Required in sips mode\n\n#{opts}"
+				if options.ifc.nil?
+					$stderr.puts "\n#{opts}\n*** Interface Not Specified.  Required in sips mode\n"
 					exit
 				end
-				options.ifc = args.delete_at(0)
 				
-				if args.empty?
-					$stderr.puts "FAST Template Not Specified.  Required in sips mode\n\n#{opts}"
+				if options.template.nil?
+					$stderr.puts "\n#{opts}\n*** FAST Template Not Specified.  Required in sips mode\n"
 					exit
 				end
-				options.template = args.delete_at(0)
 				
 			end
 
