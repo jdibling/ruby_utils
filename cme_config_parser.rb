@@ -80,8 +80,9 @@ class Optparse
 				end
 				options.template = args.delete_at(0)
 				
-				return options
 			end
+
+			return options
 		end
 	end
 end
@@ -169,7 +170,7 @@ feeds.each {|chan_id,chan_types|
   if options.mode == :sips
     sip_name = "CMEFAST_#{chan_id}"
     puts  "<#{sip_name}>"
-    puts 		"\t<xName>#{names[chan_id].gsub(" ","_")}</xName>"
+    puts 		"\t<xName>#{names[chan_id].gsub(" ","_").gsub("&","")}</xName>"
     options.additional_tags.each do |tag|
     	puts	"\t#{tag}"
     end
