@@ -69,10 +69,10 @@ class Optparse
 			# pull out positional arguments needed in :sips mode, optional in others
 			options.ifc = args.delete_at(0) unless args.empty?
 			options.template = args.delete_at(0) unless args.empty?
-
-			if options.mode == :sips
+			
+			if options.mode == :sips || options.mode == :capdata || options.mode == :mdump
 				if options.ifc.nil?
-					$stderr.puts "\n#{opts}\n*** Interface Not Specified.  Required in sips mode\n"
+					$stderr.puts "\n#{opts}\n*** Interface Not Specified.  Required in '#{options.mode.to_s}' mode\n"
 					exit
 				end
 				
