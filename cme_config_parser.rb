@@ -208,7 +208,7 @@ feeds.each {|chan_id,chan_types|
         	puts "start \"#{conn[:id]}\" capdata #{conn[:ip]} #{conn[:port]} #{options.ifc} #{conn[:id]}.cap"
         elsif options.mode == :sips
           puts    "\t<#{line_name}>"
-          puts      "\t\t<!-- #{chan_type.to_s}/#{chan_side.to_s} -->"
+          puts      "\t\t<xDescription>#{chan_type.to_s}-#{chan_side.to_s}</xDescription>"
           puts      "\t\t<Interface>#{options.ifc}</Interface>"
           puts      "\t\t<TemplateName>#{options.template}</TemplateName>"
           puts      "\t\t<SipType>MultiCast</SipType>"
